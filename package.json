@@ -10,14 +10,22 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:extension.helloWorld"
+		"onCommand:extension.summonDuck"
 	],
 	"main": "./extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "extension.helloWorld",
-				"title": "Hello World"
+				"command": "extension.summonDuck",
+				"title": "Summon a duck!"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "extension.summonDuck",
+				"key": "ctrl+alt+d",
+				"mac": "shift+alt+cmd+d",
+				"when": "editorTextFocus"
 			}
 		]
 	},
